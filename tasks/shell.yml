@@ -4,13 +4,6 @@
   sudo: true
   action: user shell=/usr/bin/tmux user=abdulkadir
 
-- shell: git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
-  args:
-    creates: ~/.scm_breeze
-
-- name: running install scmbreeze.sh
-  action: shell ~/.scm_breeze/install.sh
-
 - name: Backing up existing ~/.zshrc
   action: shell if [ -f ~/.zshrc ]; then mv ~/.zshrc ~/.zshrc.orig; fi
 

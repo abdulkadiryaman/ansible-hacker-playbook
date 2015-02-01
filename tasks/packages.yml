@@ -62,3 +62,7 @@
   - python2.7
   - indicator-netspeed
   - google-chrome-stable
+
+- name: updating pip
+  sudo: true
+  action: shell easy_install -U pip

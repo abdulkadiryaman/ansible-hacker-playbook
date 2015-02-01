@@ -17,8 +17,7 @@ Features
     - [apt-fast](ppa:saiarcot895/myppa)
     - [unity network speed indicator](ppa:nilarimogard/webupd8)
     - tmux as default shell, and set zsh default in tmux
-    - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-    - [scmbreeze](git://github.com/ndbroadbent/scm_breeze.git) for git shortcuts
+    - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) with git plugin enabled
   - apps:
     - google chrome
   - vim.plugins
