@@ -6,6 +6,7 @@
 
   tasks:
 
-  #- include: tasks/packages.yml
+  - include: tasks/packages.yml
   - include: tasks/shell.yml
   - include: tasks/go.yml
+  - include: tasks/vim.yml

@@ -111,3 +111,15 @@
 
 (nm-applet:1740): Gdk-WARNING **: nm-applet: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
 
+
+(nm-applet:23788): nm-applet-WARNING **: Failed to initialize D-Bus: Failed to connect to socket /tmp/dbus-RCaKbNQAKS: Connection refused
+
+(nm-applet:23788): GLib-GObject-CRITICAL **: object NMApplet 0x27a8040 finalized while still in-construction
+
+(nm-applet:23788): GLib-GObject-CRITICAL **: Custom constructor for class NMApplet returned NULL (which is invalid). Please use GInitable instead.
+
+(nm-applet:23815): nm-applet-WARNING **: Failed to initialize D-Bus: Failed to connect to socket /tmp/dbus-RCaKbNQAKS: Connection refused
+
+(nm-applet:23815): GLib-GObject-CRITICAL **: object NMApplet 0x1990040 finalized while still in-construction
+
+(nm-applet:23815): GLib-GObject-CRITICAL **: Custom constructor for class NMApplet returned NULL (which is invalid). Please use GInitable instead.

@@ -1,0 +1,13 @@
+---
+
+- shell: git clone --depth=1 https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+  args:
+    creates: ~/.vim/bundle/vim-go
+
+- shell: git clone --depth=1 https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
+  args:
+    creates: ~/.vim/bundle/tagbar
+
+- shell: git clone --depth=1 https://github.com/eternnoir/Conque-Shell.git  ~/.vim/bundle/Conque-Shell
+  args:
+    creates: ~/.vim/bundle/Conque-Shell

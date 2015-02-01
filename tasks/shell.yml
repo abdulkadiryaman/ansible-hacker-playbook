@@ -29,10 +29,10 @@
   args:
     creates: ~/.zshrc
 
-- shell: curl http://j.mp/spf13-vim3 -L -o - | zsh
+- script: scripts/spf13-vim3/bootstrap.sh
   args:
     creates: ~/.spf13-vim-3
 
 - shell: echo "set -g default-command /usr/bin/zsh" > ~/.tmux.conf
-  args:
-    creates: ~/.tmux.conf
+
+- shell: echo "set-window-option -g utf8 on" >> ~/.tmux.conf
