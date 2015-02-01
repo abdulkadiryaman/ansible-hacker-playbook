@@ -1,8 +1,16 @@
 ---
 
+- name: Adding docker apt-source-key
+  sudo: true
+  action: apt_key keyserver=hkp://keyserver.ubuntu.com:80 id=36A1D7869245C8950F966E92D8576A8BA88D21E9 state=present
+
+- name: Adding docker apt-source
+  sudo: true
+  action: shell echo "deb https://get.docker.com/ubuntu docker main" > /etc/apt/sources.list.d/docker.list
+
 - name: Installing zsh, vim, git, tmux, etc.
   sudo: true
-  action: apt name={{ item }} state=present update_cache=yes
+  action: apt name={{ item }} state=latest update_cache=yes
   with_items:
   - zsh
   - vim-nox
@@ -25,3 +33,4 @@
   - python-dev
   - cmake
   - dconf-cli
+  - lxc-docker
