@@ -8,14 +8,17 @@ Features
 
 - Installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), A community-driven framework for managing your zsh configuration.
 - Installs [spf13-vim](http://vim.spf13.com), "The Ultimate Vim Distribution"
+- Installs tmux as default shell, and set zsh default in tmuz
 
 Running
 -------
 
-- `yum -y install ansible`
-- `systemctl start sshd`
+- `install ansible`
+- `sudo apt-get install openssh-server sshpass`
 - `ansible-playbook --inventory 'localhost,' --ask-pass --ask-sudo-pass playbook.yml`
 
 Authors
 -------
-- [Luke Macken](http://lewk.org) ([@lmacken](http://twitter.com/lmacken))
+- Initial version: [Luke Macken](http://lewk.org) ([@lmacken](http://twitter.com/lmacken))
+
+- Modified to apt-get: Abdulkadir Yaman ([@abdulkadiryaman](http://twitter.com/abdulkadiryaman)
