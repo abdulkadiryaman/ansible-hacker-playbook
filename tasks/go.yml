@@ -1,0 +1,27 @@
+---
+
+- shell: axel -n15 -a https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
+  args:
+    executable: /usr/bin/zsh
+    creates: go1.4.1.linux-amd64.tar.gz
+
+- shell: tar xf go1.4.1.linux-amd64.tar.gz -C ~/apps
+  args:
+    executable: /usr/bin/zsh
+    creates: ~/apps/go/bin
+
+- shell: echo "export GOROOT=~/apps/go" >> ~/.zshrc
+  args:
+    executable: /usr/bin/zsh
+
+- shell: mkdir -p ~/projects/oss/gopath
+  args:
+    executable: /usr/bin/zsh
+
+- shell: echo "export GOPATH=~/projects/oss/gopath" >> ~/.zshrc
+  args:
+    executable: /usr/bin/zsh
+
+- shell: echo "export PATH=$PATH:~/apps/go/bin:~/projects/oss/gopath/bin" >> ~/.zshrc
+  args:
+    executable: /usr/bin/zsh

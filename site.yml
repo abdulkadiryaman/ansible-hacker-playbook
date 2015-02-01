@@ -1,0 +1,11 @@
+---
+
+- name: Entering Plugin Nirvana
+  hosts: all
+  sudo: False
+
+  tasks:
+
+  #- include: tasks/packages.yml
+  - include: tasks/shell.yml
+  - include: tasks/go.yml

@@ -1,0 +1,22 @@
+---
+
+- name: Installing zsh, vim, git, tmux, etc.
+  sudo: true
+  action: apt name={{ item }} state=present update_cache=yes
+  with_items:
+  - zsh
+  - vim-nox
+  - git
+  - tmux
+  - htop
+  - curl
+  - mercurial
+  - make
+  - binutils
+  - bison
+  - gcc
+  - build-essential
+  - wget
+  - ca-certificates
+  - bzr
+  - axel

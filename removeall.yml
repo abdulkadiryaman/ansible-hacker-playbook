@@ -1,0 +1,10 @@
+---
+
+- name: Removing all created files and folders
+  hosts: all
+  sudo: true
+
+  tasks:
+
+    - shell: rm -rf ~/.vim ~/.scm_breeze ~/.zshrc ~/.oh-my-zsh ~/.spf13-vim-3
+    - shell: rm -rf ~/.tmux.conf go1.4.1.linux-amd64.tar.gz ~/apps/go/ ~/projects/oss/gopath 

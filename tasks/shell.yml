@@ -1,0 +1,38 @@
+---
+
+- name: Installing pathogen.vim
+  action: shell mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+- name: Changing ghostscript executable
+  sudo: true
+  action: shell if [ -f /usr/bin/gs ]; then mv /usr/bin/gs /usr/bin/ghostscript; fi
+
+- name: Changing the default shell to tmux
+  sudo: true
+  action: user shell=/usr/bin/tmux user=abdulkadir
+
+- shell: git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
+  args:
+    creates: ~/.scm_breeze
+
+- name: running install scmbreeze.sh
+  action: shell ~/.scm_breeze/install.sh
+
+- name: Backing up existing ~/.zshrc
+  action: shell if [ -f ~/.zshrc ]; then mv ~/.zshrc ~/.zshrc.orig; fi
+
+- shell: git repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
+  args:
+    creates: ~/.oh-my-zsh
+
+- shell: cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+  args:
+    creates: ~/.zshrc
+
+- shell: curl http://j.mp/spf13-vim3 -L -o - | zsh
+  args:
+    creates: ~/.spf13-vim-3
+
+- shell: echo "set -g default-command /usr/bin/zsh" > ~/.tmux.conf
+  args:
+    creates: ~/.tmux.conf
