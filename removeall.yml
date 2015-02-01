@@ -7,7 +7,7 @@
   tasks:
 
     - shell: rm -rf ~/.vimrc ~/.scm_breeze ~/.zshrc ~/.oh-my-zsh
-    - shell: rm -rf ~/.tmux.conf ~/apps/go/ ~/projects/oss/gopath
+    - shell: rm -rf ~/.tmux* ~/apps/go/ ~/projects/oss/gopath
     - name: Changing the default shell to bash
       sudo: true
       action: user shell=/bin/bash user=abdulkadir
