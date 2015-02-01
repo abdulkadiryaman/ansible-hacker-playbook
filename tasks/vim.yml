@@ -1,5 +1,10 @@
 ---
 
+- copy: src=files/vimrc dest=~/.vimrc
+
+- name: Installing pathogen.vim
+  action: shell mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 - shell: git clone --depth=1 https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
   args:
     creates: ~/.vim/bundle/vim-go
@@ -8,6 +13,46 @@
   args:
     creates: ~/.vim/bundle/tagbar
 
+- shell: git clone --depth=1 https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
+  args:
+    creates: ~/.vim/bundle/tagbar
+
+- shell: git clone --depth=1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+  args:
+    creates: ~/.vim/bundle/nerdtree
+
+- shell: git clone --depth=1 https://github.com/fatih/molokai.git /tmp/molokai
+  args:
+    creates: /tmp/molokai
+
+- shell: cp -R /tmp/molokai/colors ~/.vim
+  args:
+    creates: ~/.vim/colors
+
+- shell: git clone --depth=1 https://github.com/Valloric/YouCompleteMe.git ~/.vim/bundle/YouCompleteMe
+  args:
+    creates: ~/.vim/bundle/YouCompleteMe
+
+- shell: cd ~/.vim/bundle/YouCompleteMe; git submodule update --init --recursive
+  args:
+    creates: ~/.vim/bundle/YouCompleteMe
+
+- shell: cd ~/.vim/bundle/YouCompleteMe;./install.sh
+
+- shell: git clone --depth=1 https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript
+  args:
+    creates: ~/.vim/bundle/vim-javascript
+
 - shell: git clone --depth=1 https://github.com/eternnoir/Conque-Shell.git  ~/.vim/bundle/Conque-Shell
   args:
     creates: ~/.vim/bundle/Conque-Shell
+
+- shell: vim +GoInstallBinaries +q
+
+- shell: git clone git@github.com:Anthony25/gnome-terminal-colors-solarized.git ~/Documents/gnome-terminal-colors-solarized
+  args:
+    creates: ~/Documents/gnome-terminal-colors-solarized
+
+- name: Install solorized theme for gnome-terminal
+  sudo: true
+  action: shell cd ~/Documents/gnome-terminal-colors-solarized; ./install.sh -s dark_alternative -p Default

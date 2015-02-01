@@ -7,7 +7,6 @@ Features
 --------
 
 - Installs [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), A community-driven framework for managing your zsh configuration.
-- Installs [spf13-vim](http://vim.spf13.com), "The Ultimate Vim Distribution"
 - Installs tmux as default shell, and set zsh default in tmuz
 
 Running

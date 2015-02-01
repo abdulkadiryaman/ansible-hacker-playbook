@@ -1,8 +1,5 @@
 ---
 
-- name: Installing pathogen.vim
-  action: shell mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
 - name: Changing ghostscript executable
   sudo: true
   action: shell if [ -f /usr/bin/gs ]; then mv /usr/bin/gs /usr/bin/ghostscript; fi

@@ -22,3 +22,6 @@
   - axel
   - tree
   - ctags
+  - python-dev
+  - cmake
+  - dconf-cli
