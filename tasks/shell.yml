@@ -29,3 +29,8 @@
 - shell: echo "set -g default-command /usr/bin/zsh" > ~/.tmux.conf
 
 - shell: echo "set-window-option -g utf8 on" >> ~/.tmux.conf
+
+- shell: echo "bind -n M-Left select-pane -L" >> ~/.tmux.conf
+- shell: echo "bind -n M-Right select-pane -R" >> ~/.tmux.conf
+- shell: echo "bind -n M-Up select-pane -U" >> ~/.tmux.conf
+- shell: echo "bind -n M-Down select-pane -D" >> ~/.tmux.conf
