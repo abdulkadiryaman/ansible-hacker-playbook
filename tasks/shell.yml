@@ -29,10 +29,6 @@
   args:
     creates: ~/.zshrc
 
-- script: scripts/spf13-vim3/bootstrap.sh
-  args:
-    creates: ~/.spf13-vim-3
-
 - shell: echo "set -g default-command /usr/bin/zsh" > ~/.tmux.conf
 
 - shell: echo "set-window-option -g utf8 on" >> ~/.tmux.conf
