@@ -26,11 +26,10 @@
   args:
     creates: ~/.zshrc
 
-- shell: echo "set -g default-command /usr/bin/zsh" > ~/.tmux.conf
+- copy: src=files/tmux.conf dest=~/.tmux.conf
 
-- shell: echo "set-window-option -g utf8 on" >> ~/.tmux.conf
+- shell: mkdir ~/.tmux
+  args:
+    creates: ~/.tmux
 
-- shell: echo "bind -n M-Left select-pane -L" >> ~/.tmux.conf
-- shell: echo "bind -n M-Right select-pane -R" >> ~/.tmux.conf
-- shell: echo "bind -n M-Up select-pane -U" >> ~/.tmux.conf
-- shell: echo "bind -n M-Down select-pane -D" >> ~/.tmux.conf
+- copy: src=files/tmux.dev dest=~/.tmux/dev
