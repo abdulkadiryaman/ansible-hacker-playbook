@@ -8,12 +8,34 @@
   sudo: true
   action: shell echo "deb https://get.docker.com/ubuntu docker main" > /etc/apt/sources.list.d/docker.list
 
+- name: Adding chrome apt-source-key
+  sudo: true
+  action: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+
+- name: Adding chrome apt-source
+  sudo: true
+  action: shell echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+
+- name: Adding apt-fast apt-source
+  sudo: true
+  action: apt_repository repo='ppa:saiarcot895/myppa' state=present
+
+- name: Adding network-speed-indicator apt-source
+  sudo: true
+  action: apt_repository repo='ppa:nilarimogard/webupd8' state=present
+
+- name: Adding java8 apt-source
+  sudo: true
+  action: apt_repository repo='ppa:webupd8team/java' state=present
+
+- shell: curl -sL https://deb.nodesource.com/setup | sudo bash -
+
 - name: Installing zsh, vim, git, tmux, etc.
   sudo: true
   action: apt name={{ item }} state=latest update_cache=yes
   with_items:
   - zsh
-  - vim-nox
+  - vim-gtk
   - git
   - tmux
   - htop
@@ -34,3 +56,9 @@
   - cmake
   - dconf-cli
   - lxc-docker
+  - nodejs
+  - oracle-java8-installer
+  - oracle-java8-set-default
+  - python2.7
+  - indicator-netspeed
+  - google-chrome-stable
