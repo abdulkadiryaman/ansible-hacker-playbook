@@ -13,10 +13,6 @@
   args:
     creates: ~/.vim/bundle/tagbar
 
-- shell: git clone --depth=1 https://github.com/majutsushi/tagbar.git ~/.vim/bundle/tagbar
-  args:
-    creates: ~/.vim/bundle/tagbar
-
 - shell: git clone --depth=1 https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
   args:
     creates: ~/.vim/bundle/nerdtree

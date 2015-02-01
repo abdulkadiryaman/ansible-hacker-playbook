@@ -1,9 +1,5 @@
 ---
 
-- name: Changing ghostscript executable
-  sudo: true
-  action: shell if [ -f /usr/bin/gs ]; then mv /usr/bin/gs /usr/bin/ghostscript; fi
-
 - name: Changing the default shell to tmux
   sudo: true
   action: user shell=/usr/bin/tmux user=abdulkadir
