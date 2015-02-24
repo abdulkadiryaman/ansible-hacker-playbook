@@ -9,6 +9,7 @@ set encoding=utf-8
 set tenc=utf8
 set fileencodings=utf-8,chinese,latin-1
 set fileencoding=utf-8
+" set mouse=a
 
 " General Settings
 
@@ -21,6 +22,8 @@ set nu              " display line number
 set ts=4            " tabstop 4
 set wak=no          " disable GUI alt menu
 set noswapfile
+
+vnoremap <C-c> "*y
 
 " FileType Aliase
 au BufNewFile,BufRead *.tmpl set filetype=html
@@ -53,12 +56,18 @@ au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>v <Plug>(go-vet)
+au FileType go nmap <leader>l :GoLint <CR> 
+au FileType go nmap <leader>f :GoImports<CR> 
+au FileType go nmap <leader>e :GoErrCheck<CR> 
+au FileType go nmap <leader>cal <Plug>(go-callees)
+au FileType go nmap <leader>car <Plug>(go-callers)
 
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
-au FileType go nmap <Leader>e <Plug>(go-rename)
+au FileType go nmap <Leader>re <Plug>(go-rename)
 
 autocmd! bufwritepost .vimrc source ~/.vimrc
 

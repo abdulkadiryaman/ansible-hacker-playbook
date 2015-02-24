@@ -62,6 +62,7 @@
   - python2.7
   - indicator-netspeed
   - google-chrome-stable
+  - account-plugin-*
 
 - name: updating pip
   sudo: true
