@@ -1,11 +1,11 @@
 ---
 
-- shell: axel -n15 -a https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz
+- shell: axel -n15 -a https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
   args:
     executable: /usr/bin/zsh
-    creates: go1.4.1.linux-amd64.tar.gz
+    creates: go1.4.2.linux-amd64.tar.gz
 
-- shell: tar xf go1.4.1.linux-amd64.tar.gz -C ~/apps
+- shell: tar xf go1.4.2.linux-amd64.tar.gz -C ~/apps
   args:
     executable: /usr/bin/zsh
     creates: ~/apps/go/bin

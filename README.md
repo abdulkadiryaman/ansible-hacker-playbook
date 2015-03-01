@@ -37,7 +37,7 @@ Running
 - [install ansible on ubuntu](http://docs.ansible.com/intro_installation.html#latest-releases-via-apt-ubuntu)
 - `sudo apt-get install openssh-server sshpass`
 - `in tasks/shell.yml change the 5th line *user=abdulkadir* with your user on ubuntu`
-- `ansible-playbook -i ubuntu --ask-pass --ask-sudo-pass playbook.yml`
+- `ansible-playbook -i ubuntu --ask-pass --ask-sudo-pass site.yml`
 
 Authors
 -------
