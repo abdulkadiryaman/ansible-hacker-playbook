@@ -69,3 +69,7 @@
 - name: updating pip
   sudo: true
   action: shell easy_install -U pip
+
+- name: installing tmuxinator 
+  sudo: true
+  action: shell gem install tmuxinator
