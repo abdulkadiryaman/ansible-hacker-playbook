@@ -25,3 +25,5 @@
 - shell: echo "export PATH=$PATH:~/apps/go/bin:~/projects/oss/gopath/bin" >> ~/.zshrc
   args:
     executable: /usr/bin/zsh
+
+- copy: src=files/go-hamms.yml dest=~/.tmuxinator/go-hamms.yml
