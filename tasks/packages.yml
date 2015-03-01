@@ -53,6 +53,7 @@
   - tree
   - ctags
   - python-dev
+  - ruby2.1
   - cmake
   - dconf-cli
   - lxc-docker
