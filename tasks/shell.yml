@@ -15,6 +15,8 @@
   args:
     creates: ~/.zshrc
 
+- shell: echo "export EDITOR=vim" >> ~/.zshrc
+
 - copy: src=files/tmux.conf dest=~/.tmux.conf
 
 - shell: mkdir ~/.tmux
