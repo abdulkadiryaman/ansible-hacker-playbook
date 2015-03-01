@@ -65,6 +65,7 @@
   - indicator-netspeed
   - google-chrome-stable
   - account-plugin-*
+  - libreadline-dev
 
 - name: updating pip
   sudo: true
