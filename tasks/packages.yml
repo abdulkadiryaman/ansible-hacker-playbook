@@ -16,6 +16,10 @@
   sudo: true
   action: shell echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 
+- name: Adding heroku apt-source
+  sudo: true
+  action: shell echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+
 - name: Adding apt-fast apt-source
   sudo: true
   action: apt_repository repo='ppa:saiarcot895/myppa' state=present
@@ -66,6 +70,7 @@
   - google-chrome-stable
   - account-plugin-*
   - libreadline-dev
+  - heroku-toolbelt
 
 - name: updating pip
   sudo: true
