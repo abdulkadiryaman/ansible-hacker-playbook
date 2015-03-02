@@ -84,9 +84,10 @@
   sudo: true
   action: shell pip install https://github.com/joh/when-changed/archive/master.zip
 
-
-
-
 - name: installing tmuxinator 
   sudo: true
   action: shell gem install tmuxinator
+
+- name: installing travis-ci client
+  sudo: true
+  action: shell gem install travis -v 1.7.5 --no-rdoc --no-ri
