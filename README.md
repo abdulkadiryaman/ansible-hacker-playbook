@@ -9,7 +9,7 @@ Features
 - Installs and sets up following technologies on Ubuntu 14.10
 
   - languages :
-    - [Go 1.4.1](https://storage.googleapis.com/golang/go1.4.1.linux-amd64.tar.gz)
+    - [Go 1.4.2](https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz)
     - [Java8](ppa:webupd8team/java)
     - [Nodejs latest](https://deb.nodesource.com/setup)
     - python2.7
