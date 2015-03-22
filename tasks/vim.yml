@@ -29,8 +29,9 @@
   args:
     creates: ~/.vim/bundle/YouCompleteMe
 
-- shell: cd ~/.vim/bundle/YouCompleteMe; git submodule update --init --recursive
+- shell: git submodule update --init --recursive
   args:
+    chdir: ~/.vim/bundle/YouCompleteMe
     creates: ~/.vim/bundle/YouCompleteMe
 
 - shell: cd ~/.vim/bundle/YouCompleteMe;./install.sh
@@ -50,5 +51,4 @@
     creates: ~/Documents/gnome-terminal-colors-solarized
 
 - name: Install solorized theme for gnome-terminal
-  sudo: true
-  action: shell cd ~/Documents/gnome-terminal-colors-solarized; ./install.sh -s dark_alternative -p Default
+  action: shell cd ~/Documents/gnome-terminal-colors-solarized; ./install.sh -s dark_alternative -p solarized

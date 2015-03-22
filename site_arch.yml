@@ -1,0 +1,12 @@
+---
+
+- name: Configuring Arch
+  hosts: all
+  sudo: False
+
+  tasks:
+
+#  - include: tasks/packages_arch.yml
+  - include: tasks/shell.yml
+  - include: tasks/go_arch.yml
+  - include: tasks/vim.yml

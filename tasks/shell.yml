@@ -1,5 +1,9 @@
 ---
 
+- name:  adding tmux to /etc/shells
+  sudo: true
+  action: shell echo "/usr/bin/tmux" >> /etc/shells
+
 - name: Changing the default shell to tmux
   sudo: true
   action: user shell=/usr/bin/tmux user=abdulkadir
@@ -7,7 +11,7 @@
 - name: Backing up existing ~/.zshrc
   action: shell if [ -f ~/.zshrc ]; then mv ~/.zshrc ~/.zshrc.orig; fi
 
-- shell: git repo=https://github.com/robbyrussell/oh-my-zsh dest=~/.oh-my-zsh
+- shell: git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
   args:
     creates: ~/.oh-my-zsh
 

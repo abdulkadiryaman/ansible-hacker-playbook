@@ -80,11 +80,11 @@
   sudo: true
   action: shell pip install pyinotify
 
-- name: installing when-changed 
+- name: installing when-changed
   sudo: true
   action: shell pip install https://github.com/joh/when-changed/archive/master.zip
 
-- name: installing tmuxinator 
+- name: installing tmuxinator
   sudo: true
   action: shell gem install tmuxinator
 

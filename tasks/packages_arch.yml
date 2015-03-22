@@ -1,0 +1,25 @@
+---
+
+- name: Installing aur packages
+  sudo: true
+  action: shell aura -Au {{ item }} --noconfirm
+  with_items:
+  - heroku-toolbelt tmuxinator jdk
+
+- name: Installing official packages
+  sudo: true
+  action: shell aura -Su {{ item }} --noconfirm
+  with_items:
+  - vim tmux htop mercurial axel docker ruby nodejs bzr tree virtualbox virtualbox-guest-iso python2-pip mercurial ctags scala go
+
+- name:  installing pyinotify
+  sudo: true
+  action: shell pip2 install pyinotify
+
+- name: installing when-changed
+  sudo: true
+  action: shell pip2 install https://github.com/joh/when-changed/archive/master.zip
+
+- name: installing travis-ci client
+  sudo: true
+  action: shell gem install travis -v 1.7.5 --no-rdoc --no-ri

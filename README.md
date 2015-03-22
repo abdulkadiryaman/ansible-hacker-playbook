@@ -6,7 +6,7 @@ An [ansible](http://ansible.cc) playbook that sets up my development environment
 Features
 --------
 
-- Installs and sets up following technologies on Ubuntu 14.10
+- Installs and sets up following technologies
 
   - languages :
     - [Go 1.4.2](https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz)
@@ -31,13 +31,22 @@ Features
     - [conque-shell](https://github.com/eternnoir/Conque-Shell.git)
     - [solarized theme for gnome-terminal](git@github.com:Anthony25/gnome-terminal-colors-solarized.git)
 
-Running
+Running For ubuntu 14.10
 -------
 
 - [install ansible on ubuntu](http://docs.ansible.com/intro_installation.html#latest-releases-via-apt-ubuntu)
 - `sudo apt-get install openssh-server sshpass`
 - `in tasks/shell.yml change the 5th line *user=abdulkadir* with your user on ubuntu`
 - `ansible-playbook -i ubuntu --ask-pass --ask-sudo-pass site.yml`
+
+Running For Arch
+-------
+
+- `sudo pacman -S ansible openssh sshpass`
+- `systemctl start sshd.service`
+- `systemctl enable sshd.service`
+- `in tasks/shell.yml change the 5th line *user=abdulkadir* with your user on ubuntu`
+- `ansible-playbook -i ubuntu --ask-pass --ask-sudo-pass site_arch.yml`
 
 Authors
 -------
