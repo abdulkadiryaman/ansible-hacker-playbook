@@ -10,7 +10,7 @@
   sudo: true
   action: shell aura -Su {{ item }} --noconfirm
   with_items:
-  - vim tmux htop mercurial axel docker ruby nodejs bzr tree virtualbox virtualbox-guest-iso python2-pip mercurial ctags scala go
+      - vim tmux htop mercurial axel docker ruby nodejs bzr tree virtualbox virtualbox-guest-iso python2-pip mercurial ctags scala go intellij-idea-community-edition
 
 - name:  installing pyinotify
   sudo: true
